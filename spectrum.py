@@ -36,8 +36,8 @@ class Net(nn.Module):
 
 
 def post_process_average():
-    os.environ['CUDA_VISIBLE_DEVICES'] = '0'  # 指定使用0号GPU
-    device = torch.device('cuda:0') if torch.cuda.is_available() else torch.cuda('cpu')  # 没有GPU就用CPU
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+    device = torch.device('cuda:0') if torch.cuda.is_available() else torch.cuda('cpu')
     PINN = Net(seq_net=[3, 300, 300, 300, 300, 300, 4]).to(device)
     PINN.load_state_dict(torch.load('RB_train_lambda(1600000).pth'))
     for parameters in PINN.parameters():
@@ -132,8 +132,8 @@ def fft_plot(e1, e2):
     plt.figure()
     plt.plot(x * gap, normalization_e1)
     plt.plot(x * gap, normalization_e2)
-    plt.xscale('log')  # 设置x轴为对数轴
-    plt.yscale('log')  # 设置y轴为对数轴
+    plt.xscale('log')
+    plt.yscale('log')
     plt.xlim(1e-5, 1e0)
     plt.xlabel('Hz')
     plt.title('spectrum (normalized)')
