@@ -5,7 +5,7 @@ A pytorch implementation of 2D Rayleigh-Bénard convection using PINN
 The test case for this repository is Rayleigh Bernard convective flow at Ra=1e8, Pr=2.
 DNS data is calculated by the program in the link https://github.com/PhysicsofFluids/AFiD.
 Nx=Ny=96, Nt=100;
-Lx*Ly=[-0.5, 0.5]*[-0.5, 0.5], Lt=20s;
+Lx,Ly=[-0.5, 0.5],[-0.5, 0.5], Lt=20s;
 
 # Note
 1. All the data in the wake region is used in this repository. However, if you try different sparsity, you will find it is still trainable.
@@ -20,7 +20,5 @@ Lx*Ly=[-0.5, 0.5]*[-0.5, 0.5], Lt=20s;
 
 # Reference
 1. Raissi M, Perdikaris P, Karniadakis G E. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations[J]. Journal of Computational physics, 2019, 378: 686-707.
-2.Lucor D, Agrawal A, Sergent A. Simple computational strategies for more effective physics-informed neural networks modeling of turbulent natural convection[J]. Journal of Computational Physics, 2022, 456: 111022.
-3.Wang Q. Turbulent thermal convection: From Rayleigh-Bénard to vertical convection[J]. 2020.
-
-
+2. Lucor D, Agrawal A, Sergent A. Simple computational strategies for more effective physics-informed neural networks modeling of turbulent natural convection[J]. Journal of Computational Physics, 2022, 456: 111022.
+3. Wang Q. Turbulent thermal convection: From Rayleigh-Bénard to vertical convection[J]. 2020.
