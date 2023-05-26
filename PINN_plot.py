@@ -172,21 +172,21 @@ def plot(t):
 
 
 def action_fig(num):
-    #
+    # action fig v
     with imageio.get_writer(uri='action_v_pred.gif', mode='I', fps=2) as writer:
         for i in range(0, num, 10):
             writer.append_data(imageio.imread(f'({i}).v.jpg'))
     with imageio.get_writer(uri='action_v_error.gif', mode='I', fps=2) as writer:
         for i in range(0, num, 10):
             writer.append_data(imageio.imread(f'({i}).v_error.jpg'))
-
+    # action fig u
     with imageio.get_writer(uri='action_u_pred.gif', mode='I', fps=2) as writer:
         for i in range(0, num, 10):
             writer.append_data(imageio.imread(f'({i}).u.jpg'))
     with imageio.get_writer(uri='action_u_error.gif', mode='I', fps=2) as writer:
         for i in range(0, num, 10):
             writer.append_data(imageio.imread(f'({i}).v_error.jpg'))
-
+    # action fig k
     with imageio.get_writer(uri='action_k_pred.gif', mode='I', fps=2) as writer:
         for i in range(0, num, 10):
             writer.append_data(imageio.imread(f'({i}).k.jpg'))
