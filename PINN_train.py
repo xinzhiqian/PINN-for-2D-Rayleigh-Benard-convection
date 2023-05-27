@@ -144,8 +144,8 @@ def train():
     K_b = torch.from_numpy(K_boundary).to(device).float().requires_grad_(True)
 
     # sample for pde and data
-    idx = np.random.choice(N * T, N_train, replace=False)  # 从0到N*T中不重复随机抽取N_train个数，并组成1维数组
-    x_train = torch.from_numpy(x[idx, :]).to(device).float().requires_grad_(True)  # 计算中保留梯度值
+    idx = np.random.choice(N * T, N_train, replace=False) 
+    x_train = torch.from_numpy(x[idx, :]).to(device).float().requires_grad_(True)
     y_train = torch.from_numpy(y[idx, :]).to(device).float().requires_grad_(True)  # N*1
     t_train = torch.from_numpy(t[idx, :]).to(device).float().requires_grad_(True)
     u_train = torch.from_numpy(u[idx, :]).to(device).float().requires_grad_(True)
