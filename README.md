@@ -16,7 +16,7 @@ Lx,Ly=[-0.5, 0.5],[-0.5, 0.5], Lt=20s;
 
 4. If you want to know more about Rayleigh-Bénard convection, please refer to reference 3
 
-5. The code is still being optimized, it would be appreciated to contact me (xinzq@zju.edu.cn) if you find any unreasonably written code.
+5. The code has stopped optimizing, yet you may contact me (xinzq@zju.edu.cn) if you find any unreasonably written code.
 
 # Reference
 1. Raissi M, Perdikaris P, Karniadakis G E. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations[J]. Journal of Computational physics, 2019, 378: 686-707.
