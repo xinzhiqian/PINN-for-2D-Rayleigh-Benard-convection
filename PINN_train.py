@@ -179,7 +179,7 @@ def train():
         PDE_1, PDE_2, PDE_3, PDE_4, u_u, u_v, u_p, u_k = PDE(u_v_p_K, x_train, y_train, t_train, 1e8, 2)  # Ra、Pr
 
         mse_PDE_1 = criterion(PDE_1, torch.zeros_like(PDE_1))
-        mse_PDE_2 = criterion(PDE_1, torch.zeros_like(PDE_2))
+        mse_PDE_2 = criterion(PDE_2, torch.zeros_like(PDE_2))
         mse_PDE_3 = criterion(PDE_3, torch.zeros_like(PDE_3))
         mse_PDE_4 = criterion(PDE_4, torch.zeros_like(PDE_4))
         mse_PDE = mse_PDE_2 + mse_PDE_1 + mse_PDE_3 + mse_PDE_4
